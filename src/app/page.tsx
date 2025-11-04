@@ -111,13 +111,29 @@ export default function Home() {
             </h2>
             <div className="absolute inset-0 flex items-center justify-center p-8 md:p-12">
               <div className="max-w-5xl w-full">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                  {[
-                    { title: "Project One", desc: "Description coming soon", url: "#" },
-                    { title: "Project Two", desc: "Description coming soon", url: "#" },
-                    { title: "Project Three", desc: "Description coming soon", url: "#" },
-                    { title: "Project Four", desc: "Description coming soon", url: "#" }
-                  ].map((project, i) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                {[
+                  { 
+                    title: "Magnara.AI", 
+                    desc: "AI-powered legal automation platform for immigration law firms featuring workflow automation, document management, AI-driven intake processing, and case tracking with role-based access control.", 
+                    url: "https://www.magnara.ai" 
+                  },
+                  { 
+                    title: "DataPilot", 
+                    desc: "Enterprise-grade analytics platform with AI-powered insights, automated trend detection, pattern recognition, and data transformation capabilities supporting CSV, Excel, and JSON formats.", 
+                    url: "https://github.com/aaronjager2000/datapilot" 
+                  },
+                  { 
+                    title: "Competence Collective", 
+                    desc: "Professional services website built with modern web technologies, featuring responsive design and optimized user experience for client engagement and business showcase.", 
+                    url: "https://www.competencecollective.com" 
+                  },
+                  { 
+                    title: "Apex Ecom", 
+                    desc: "Click funnel website built with Next.js and modern web technologies.", 
+                    url: "https://apexecom.vercel.app" 
+                  }
+                ].map((project, i) => (
                     <a
                       key={i}
                       href={project.url}
