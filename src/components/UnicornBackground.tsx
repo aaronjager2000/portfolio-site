@@ -2,7 +2,11 @@
 
 import { useEffect, useState } from 'react';
 
-export default function UnicornBackground() {
+interface UnicornBackgroundProps {
+  isIdle: boolean;
+}
+
+export default function UnicornBackground({ isIdle }: UnicornBackgroundProps) {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
 
   useEffect(() => {
@@ -51,10 +55,19 @@ export default function UnicornBackground() {
           transition: 'filter 0.5s ease, opacity 0.5s ease'
         }}
       >
-        <div className="aura-background-component absolute w-full h-full top-0 left-0">
+        <div 
+          className="aura-background-component absolute w-full h-full top-0 left-0"
+          style={{
+            animationPlayState: isIdle ? 'running' : 'paused',
+            transition: 'opacity 0.5s ease'
+          }}
+        >
           <div 
             data-us-project="inzENTvhzS9plyop7Z6g" 
             className="absolute w-full h-full left-0 top-0 -z-10"
+            style={{
+              animationPlayState: isIdle ? 'running' : 'paused'
+            }}
           />
         </div>
       </div>
