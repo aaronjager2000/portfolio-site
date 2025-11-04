@@ -1,0 +1,924 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnara AI — Legal Automation for Immigration Firms</title>
+    <meta name="description" content="Magnara AI automates the entire client journey for immigration law firms — from 24/7 multilingual intake calls to structured case files and compliant document drafts in minutes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+      }
+      @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(30px); }
+      to { opacity: 1; transform: translateX(0); }
+      }
+      @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+      }
+      @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+      }
+      @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes drop {
+      0% {top:-50%;}
+      100% {top:110%;}
+      }
+      @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+      }
+      .animate-fadeInUp { animation: fadeInUp 0.6s ease-out forwards; }
+      .animate-fadeInLeft { animation: fadeInLeft 0.6s ease-out forwards; }
+      .animate-fadeInRight { animation: fadeInRight 0.6s ease-out forwards; }
+      .animate-fadeIn { animation: fadeIn 0.6s ease-out forwards; }
+      .animate-scaleIn { animation: scaleIn 0.6s ease-out forwards; }
+      .animate-slideDown { animation: slideDown 0.4s ease-out forwards; }
+      .animate-pulse { animation: pulse 2s ease-in-out infinite; }
+      .animation-delay-100 { animation-delay: 0.1s; opacity: 0; }
+      .animation-delay-200 { animation-delay: 0.2s; opacity: 0; }
+      .animation-delay-300 { animation-delay: 0.3s; opacity: 0; }
+      .animation-delay-400 { animation-delay: 0.4s; opacity: 0; }
+      .animation-delay-500 { animation-delay: 0.5s; opacity: 0; }
+      .animation-delay-600 { animation-delay: 0.6s; opacity: 0; }
+      .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .hover-lift:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+      .stagger-animation > * { opacity: 0; animation: fadeInUp 0.6s ease-out forwards; }
+      .stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+      .stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+      .stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+      .stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+      .stagger-animation > *:nth-child(5) { animation-delay: 0.5s; }
+      .stagger-animation > *:nth-child(6) { animation-delay: 0.6s; }
+      .line-anim::after {
+      content:'';
+      display:block;
+      position:absolute;
+      height:15vh;
+      width:100%;
+      top:-50%;
+      left:0;
+      background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,#fff 75%,#fff 100%);
+      animation:drop 7s 0s infinite;
+      animation-fill-mode:forwards;
+      animation-timing-function:cubic-bezier(0.4,0.26,0,0.97);
+      }
+      .line-1::after {animation-delay:2s;}
+      .line-3::after {animation-delay:2.5s;}
+    </style>
+    <meta name="disabled-font-classes" content="font-roboto,font-montserrat,font-poppins,font-playfair,font-instrument-serif,font-merriweather,font-bricolage,font-jakarta,font-manrope,font-space-grotesk,font-work-sans,font-pt-serif,font-geist-mono,font-space-mono,font-quicksand,font-nunito">
+    <link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap">
+    <style id="all-fonts-style-font-geist">
+      .font-geist { font-family: 'Geist', sans-serif !important; }
+    </style>
+  </head>
+  <body id="top" class="antialiased overflow-x-hidden text-neutral-900 bg-white relative" style="font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;" data-element-id="aura-emfwpec0z">
+    <!-- Header -->
+    <header class="relative z-10 sm:px-6 md:px-10 animate-slideDown bg-white w-full max-w-7xl border-neutral-200/70 border rounded-3xl mt-6 mr-auto ml-auto pt-4 pr-4 pb-4 pl-4 shadow-2xl">
+      <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="flex items-center gap-2">
+            <div class="flex gap-2 cursor-pointer items-center" onclick="window.location.hash='top'" role="button">
+              <svg class="md:w-14 md:h-14 w-[36px] h-[36px] text-neutral-900" viewBox="0 0 48 48" aria-hidden="true" stroke-width="2" style="width: 36px; height: 36px;">
+                <path d="M24 8 L40 36 H8 Z" fill="currentColor" class=""></path>
+              </svg>
+              <span class="text-xl text-neutral-900 font-geist tracking-tight" style="">
+                Magnara AI
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm text-neutral-600">
+          <a href="#workflows" class="hover:text-neutral-900 transition-colors hover:scale-105 duration-200 font-geist tracking-tight" style="">
+            How It Works
+          </a>
+          <a href="#solutions" class="hover:text-neutral-900 transition-colors hover:scale-105 duration-200 font-geist tracking-tight" style="">
+            Solutions
+          </a>
+        </nav>
+        <a href="#demo" class="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm text-white bg-neutral-900 hover:bg-neutral-800 transition-colors font-geist tracking-tight">
+          Contact Us
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="z-10 sm:p-8 animate-scaleIn animation-delay-200 text-white bg-neutral-950 w-full max-w-7xl border-white/10 border rounded-[48px] mt-24 mr-auto ml-auto pt-6 pr-6 pb-6 pl-6 relative top-0 right-0 bottom-0 left-0 shadow-2xl" style="height: 600px; overflow: hidden;">
+      <!-- Background layers -->
+      <div class="overflow-hidden bg-gradient-to-tr from-neutral-950 via-neutral-950/90 to-neutral-900/60 border-white/10 border rounded-[48px] absolute top-0 right-0 bottom-0 left-0 shadow-2xl backdrop-blur-sm items-center">
+        <div class="absolute top-0 right-0 bottom-0 left-0 saturate-50 brightness-75" data-container-bg="true">
+          <div class="aura-background-component -z-10 absolute w-full h-full top-0" style="width: 1276px; height: 596px;">
+            <div data-us-project="inzENTvhzS9plyop7Z6g" class="absolute w-full h-full left-0 top-0 -z-10"></div>
+            <script type="text/javascript">
+              !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+            </script>
+          </div>
+        </div>
+        <!-- Soft radial glows -->
+
+        <!-- Left content -->
+        <div class="sm:w-1/2 flex w-full absolute top-0 bottom-0 left-0 items-center">
+          <div class="sm:px-10 w-full pr-6 pl-6">
+            <!-- Headline -->
+            <h2 class="sm:text-6xl md:text-7xl leading-[1.05] text-4xl text-white mt-4 font-geist tracking-tighter" style="">
+              From first call to fully drafted immigration case files.
+            </h2>
+
+            <!-- Subcopy -->
+            <p class="sm:text-base animate-fadeInRight animation-delay-400 text-sm text-neutral-300 max-w-[52ch] mt-4 font-geist tracking-tight" style="">
+              Magnara AI handles the entire client journey — 24/7 multilingual
+              intake, instant case creation, and compliant document drafts in
+              minutes.
+            </p>
+
+            <!-- CTAs -->
+            <div class="flex gap-4 sm:gap-6 animate-fadeInUp animation-delay-500 mt-5 items-center">
+              <a href="#workflows" class="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm text-neutral-900 bg-gradient-to-r from-emerald-400 to-green-400 hover:from-emerald-500 hover:to-green-500 transition-colors font-geist tracking-tight" onmouseover="this.style.transform='scale(0.98)'" onmouseout="this.style.transform='scale(1)'" style="transform: scale(1); box-shadow: rgba(34, 197, 94, 0.25) 0px 8px 24px;">
+                See How It Works
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" style="stroke-width:1.5" class="lucide lucide-arrow-right w-4 h-4">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right visual: floating UI stack -->
+        <div class="absolute top-1/2" style="transform: translateY(-50%); right: -32px;">
+          <div class="overflow-hidden sm:w-[480px] bg-neutral-950 text-white w-[420px] border-white/10 border rounded-3xl relative shadow-2xl" style="box-shadow: 0 40px 100px rgba(0,0,0,0.6);">
+            <div class="card-top glass-effect w-[32rem] h-fit overflow-hidden relative transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] bg-gradient-to-r from-white/15 to-white/5 rounded-[1.2em]" style="backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+              <div class="absolute inset-0 rounded-[1.2em] border border-white/20" style="mask-image: linear-gradient(135deg, white, transparent 60%)"></div>
+              <div class="border-emerald-300/20 border rounded-[1.2em] absolute top-0 right-0 bottom-0 left-0" style="mask-image: linear-gradient(135deg, transparent 60%, rgba(16, 185, 129, 0.8))"></div>
+              <div class="pointer-events-none absolute -inset-px rounded-[1.3rem] bg-[radial-gradient(80%_60%_at_50%_0%,rgba(52,211,153,0.12),transparent_60%)]"></div>
+
+              <div class="flex flex-col h-full p-6 pb-7">
+                <div class="flex justify-between items-start mb-2">
+                  <div class="w-3/4">
+                    <h1 class="text-[26px] leading-tight tracking-tight font-sans font-medium" style="">
+                      Magnara AI Console
+                    </h1>
+                    <p class="text-neutral-300 text-sm font-light mt-1 font-sans">
+                      Legal Automation • Live
+                    </p>
+                  </div>
+                  <div class="w-1/4 text-right">
+                    <div class="text-[20px] font-semibold font-mono font-sans">
+                      PIPELINE
+                    </div>
+                    <div class="flex items-center justify-end gap-1 mt-1">
+                      <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" style="box-shadow: 0 0 6px rgba(16, 185, 129, 0.3)"></div>
+                      <span class="text-xs text-emerald-300 font-sans">
+                        RUNNING
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relative mx-auto w-full mb-4">
+                  <div class="absolute inset-0 translate-y-2 scale-[0.98] rounded-lg bg-neutral-900/50 ring-1 ring-white/5 blur-[0.3px]"></div>
+                  <div class="relative rounded-lg bg-[linear-gradient(180deg,rgba(19,24,31,0.9),rgba(10,13,18,0.9))] ring-1 ring-white/10 overflow-hidden">
+                    <div class="flex items-center justify-between px-3 py-2 border-b border-white/5 bg-neutral-950/50">
+                      <div class="flex items-center gap-2">
+                        <span class="h-2 w-2 rounded-full bg-red-500/60"></span>
+                        <span class="h-2 w-2 rounded-full bg-amber-500/60"></span>
+                        <span class="h-2 w-2 rounded-full bg-emerald-500/60"></span>
+                      </div>
+                      <div class="flex items-center gap-2 rounded-full border border-white/10 bg-neutral-900/60 px-2 py-1 text-xs text-neutral-300">
+                        <svg class="w-3 h-3 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="stroke-width:1.5">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" class=""></path>
+                        </svg>
+                        <span class="text-neutral-400/80 font-sans">
+                          magnara-pipeline…
+                        </span>
+                      </div>
+                    </div>
+                    <div class="relative h-32">
+                      <div class="absolute inset-0 grid grid-cols-[30px_1fr]">
+                        <div class="select-none border-r border-white/5 bg-neutral-950/30 px-2 py-2 text-[11px leading-4 text-neutral-400/50">
+                          <div class="font-sans">1</div>
+                          <div class="font-sans">2</div>
+                          <div class="font-sans">3</div>
+                          <div class="font-sans">4</div>
+                          <div class="font-sans">5</div>
+                          <div class="font-sans">6</div>
+                          <div class="font-sans">7</div>
+                          <div class="font-sans">8</div>
+                        </div>
+                        <pre class="overflow-hidden text-[11px] leading-4 text-neutral-300 mt-0 mr-0 mb-0 ml-0 pt-2 pr-3 pb-2 pl-3">const call = intake.process({ lang: 'en/es', timestamp: Date.now() })
+const classification = ai.classify(call.transcript)
+
+const caseFile = cases.create({
+  client: call.client,
+  type: classification.caseType,
+  details: classification.entities
+})
+
+const drafts = docs.generate(caseFile, [
+  'I-130', 'I-485', 'N-400', 'I-765', 'I-131'
+])
+
+compliance.validate(drafts, { jurisdiction: 'USCIS' })
+notify.client(caseFile, { stage: 'Draft Ready' })</pre>
+                      </div>
+                      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-[#0B0F14] to-transparent"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex justify-between mb-4 max-w-lg">
+                  <div class="text-all duration-300 p-2 rounded-lg hover:bg-white/5 hover:-translate-y-0.5">
+                    <div class="text-2xl leading-tight bg-gradient-to-r from-white/95 to-neutral-200/80 bg-clip-text text-transparent font-sans font-medium" style="">
+                      95
+                      <span class="text-sm font-sans">%</span>
+                    </div>
+                    <div class="text-xs opacity-70 uppercase tracking-wide font-sans">
+                      DRAFT ACCURACY
+                    </div>
+                  </div>
+                  <div class="w-px h-12 my-auto bg-gradient-to-b from-transparent via-white/40 to-transparent"></div>
+                  <div class="text-center px-2 cursor-pointer transition-all duration-300 p-2 rounded-lg hover:bg-white/5 hover:-translate-y-0.5">
+                    <div class="text-2xl leading-tight bg-gradient-to-r from-white/95 to-neutral-200/80 bg-clip-text text-transparent font-sans font-medium" style="">
+                      3
+                      <span class="text-sm font-sans">min</span>
+                    </div>
+                    <div class="text-xs opacity-70 uppercase tracking-wide font-sans">
+                      CALL → DRAFT
+                    </div>
+                  </div>
+                  <div class="w-px h-12 my-auto bg-gradient-to-b from-transparent via-white/40 to-transparent"></div>
+                  <div class="text-center px-2 cursor-pointer transition-all duration-300 p-2 rounded-lg hover:bg-white/5 hover:-translate-y-0.5">
+                    <div class="text-2xl leading-tight bg-gradient-to-r from-white/95 to-neutral-200/80 bg-clip-text text-transparent font-sans font-medium" style="">
+                      4.8
+                      <span class="text-sm font-sans">/5</span>
+                    </div>
+                    <div class="text-xs opacity-70 uppercase tracking-wide font-sans">
+                      CLIENT SAT.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="h-px w-full bg-gradient-to-r from-transparent via-white/25 to-transparent mb-3"></div>
+
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 cursor-pointer transition-all duration-300 hover:-translate-y-px hover:shadow-lg font-sans">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="stroke-width:1.5">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    IMMIGRATION FORMS
+                  </span>
+                  <span class="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 cursor-pointer transition-all duration-300 hover:-translate-y-px hover:shadow-lg font-sans">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="stroke-width:1.5">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2zm0 0V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10m-6 0a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m0 0V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"></path>
+                    </svg>
+                    SUPPORTING LETTERS
+                  </span>
+                  <span class="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-300 cursor-pointer transition-all duration-300 hover:-translate-y-px hover:shadow-lg font-sans">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="stroke-width:1.5">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 4V2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v2m0 0H7m10 0v18a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V4"></path>
+                    </svg>
+                    DECLARATIONS
+                  </span>
+                </div>
+
+                <div class="rounded px-2 py-0.5 font-mono text-xs relative overflow-hidden mb-4" style="background: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.08) 100%)">
+                  <div class="flex items-center justify-between">
+                    <span class="text-neutral-300 font-sans">
+                      STATUS: VALIDATING COMPLIANCE
+                    </span>
+                    <span class="text-white font-sans">v2.1.0</span>
+                  </div>
+                </div>
+
+                <div class="mt-auto flex justify-between w-full">
+                  <div class="flex flex-col">
+                    <span class="opacity-70 flex items-center gap-2 text-sm mb-1">
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="stroke-width:1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                      </svg>
+                      <span class="font-sans">CONTEXT-AWARE</span>
+                    </span>
+                    <span class="text-xs opacity-60 flex items-center gap-2 font-mono">
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="stroke-width:1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100-4m0 4v2m0-6V4"></path>
+                      </svg>
+                      <span class="font-sans">MULTI-LANGUAGE</span>
+                    </span>
+                  </div>
+                  <div class="flex flex-col items-end">
+                    <span class="opacity-70 flex items-center gap-2 text-sm mb-1">
+                      <svg class="w-[12px] h-[12px]" fill="none" stroke="currentColor" viewBox="0 0 48 48" stroke-width="2" data-icon-replaced="true" style="width: 12px; height: 12px; color: rgb(245, 245, 245);">
+                        <path d="M24 8 L40 36 H8 Z" fill="currentColor"></path>
+                      </svg>
+                      <span class="font-sans">MAGNARA</span>
+                      <div class="w-2 h-2 rounded-full bg-emerald-400" style="box-shadow: 0 0 6px rgba(52, 211, 153, 0.4)"></div>
+                    </span>
+                    <p class="text-sm font-medium flex items-center gap-2 cursor-pointer hover:text-blue-300 transition-colors">
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="stroke-width:1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                      </svg>
+                      <span class="font-sans">console.magnara.ai</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div aria-hidden="true" class="pointer-events-none absolute -right-20 -bottom-20 w-[420px] h-[420px] rounded-full bg-emerald-500/5 blur-3xl"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="z-10 sm:p-8 animate-scaleIn animation-delay-300 bg-white w-full max-w-7xl border-neutral-200/70 border rounded-3xl mt-24 mr-auto ml-auto pt-6 pr-6 pb-6 pl-6 relative shadow-2xl" id="workflows">
+      <!-- Header -->
+      <div class="flex gap-6 sm:px-0 animate-fadeInUp pr-1 pl-1 items-center">
+        <h2 class="text-[44px] sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.9] text-zinc-950 font-geist tracking-tighter" style="">
+          How it works.
+        </h2>
+        <span aria-hidden="true" role="separator" aria-orientation="vertical" class="w-px bg-neutral-200 h-10"></span>
+        <p class="sm:text-base text-sm text-zinc-400 mt-1 font-geist tracking-tight" style="">
+          Three stages from intake to compliant drafts
+        </p>
+      </div>
+      <div class="h-px animate-fadeIn animation-delay-100 bg-neutral-200 mt-4"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 z-10 sm:mt-8 mt-6 relative items-stretch">
+        <!-- STEP 1 -->
+        <div class="lg:col-span-4 sm:p-8 hover-lift bg-white border-neutral-200 border rounded-[28px] pt-6 pr-6 pb-6 pl-6 relative h-full flex flex-col">
+          <span class="absolute -top-4 left-6 inline-flex items-center px-4 py-1.5 rounded-full border border-neutral-200 bg-white text-xs sm:text-sm text-neutral-800 font-geist tracking-tight" style="">
+            STEP 1
+          </span>
+          <!-- Visual -->
+          <div class="relative h-48 sm:h-56 rounded-2xl bg-neutral-100 border border-neutral-200 overflow-hidden">
+            <div class="absolute inset-0 p-4 sm:p-6">
+              <div class="bg-white/90 border border-neutral-200 rounded-xl p-4 w-full shadow-2xl">
+                <div class="flex items-center gap-2 mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-emerald-600">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14,2 14,8 20,8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10,9 9,9 8,9"></polyline>
+                  </svg>
+                  <div class="h-2 w-24 bg-neutral-900 rounded"></div>
+                </div>
+                <div class="h-2 w-full bg-neutral-100 rounded mb-2"></div>
+                <div class="h-2 w-4/5 bg-neutral-100 rounded mb-2"></div>
+                <div class="h-2 w-3/4 bg-neutral-100 rounded mb-3"></div>
+                <div class="flex gap-2">
+                  <div class="h-6 w-24 bg-emerald-100 rounded-lg flex items-center justify-center">
+                    <div class="h-1 w-12 bg-emerald-600 rounded"></div>
+                  </div>
+                  <div class="h-6 w-28 bg-neutral-100 rounded-lg"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Copy -->
+          <h3 class="mt-6 text-3xl sm:text-4xl text-neutral-900 font-geist tracking-tighter" style="">
+            AI Receptionist Call Processing
+          </h3>
+          <p class="mt-2 text-sm sm:text-base text-neutral-600 max-w-[52ch] font-geist tracking-tight" style="">
+            Handles calls 24/7 in multiple languages, classifies immigration
+            case types, and extracts all relevant client details from natural
+            conversations.
+          </p>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="lg:col-span-4 sm:p-8 hover-lift bg-white border-neutral-200 border rounded-[28px] pt-6 pr-6 pb-6 pl-6 relative h-full flex flex-col">
+          <span class="absolute -top-4 left-6 inline-flex items-center px-4 py-1.5 rounded-full border border-neutral-200 bg-white text-xs sm:text-sm text-neutral-800 font-geist tracking-tight" style="">
+            STEP 2
+          </span>
+          <!-- Visual -->
+          <div class="relative h-48 sm:h-56 rounded-2xl border border-neutral-200 overflow-hidden bg-gradient-to-br from-neutral-50 to-neutral-100 p-4">
+            <div class="grid grid-cols-2 gap-3 h-full">
+              <div class="bg-white border border-neutral-200 rounded-lg p-3 shadow-sm">
+                <div class="flex items-center gap-2 mb-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                  <div class="h-1.5 w-12 bg-blue-600 rounded"></div>
+                </div>
+                <div class="space-y-1">
+                  <div class="h-1 w-full bg-neutral-200 rounded"></div>
+                  <div class="h-1 w-4/5 bg-neutral-200 rounded"></div>
+                  <div class="h-1 w-3/4 bg-neutral-200 rounded"></div>
+                </div>
+              </div>
+              <div class="bg-white border border-neutral-200 rounded-lg p-3 shadow-sm">
+                <div class="flex items-center gap-2 mb-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-600">
+                    <rect width="20" height="14" x="2" y="3" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                  <div class="h-1.5 w-10 bg-emerald-600 rounded"></div>
+                </div>
+                <div class="space-y-1">
+                  <div class="h-1 w-full bg-neutral-200 rounded"></div>
+                  <div class="h-1 w-5/6 bg-neutral-200 rounded"></div>
+                  <div class="h-1 w-2/3 bg-neutral-200 rounded"></div>
+                </div>
+              </div>
+              <div class="bg-white border border-neutral-200 rounded-lg p-3 shadow-sm">
+                <div class="flex items-center gap-2 mb-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                  </svg>
+                  <div class="h-1.5 w-14 bg-purple-600 rounded"></div>
+                </div>
+                <div class="space-y-1">
+                  <div class="h-1 w-full bg-neutral-200 rounded"></div>
+                  <div class="h-1 w-4/5 bg-neutral-200 rounded"></div>
+                  <div class="h-1 w-3/5 bg-neutral-200 rounded"></div>
+                </div>
+              </div>
+              <div class="bg-white border border-neutral-200 rounded-lg p-3 shadow-sm">
+                <div class="flex items-center gap-2 mb-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-orange-600">
+                    <path d="M4 4l11.733 16h4.267l-11.733-16z"></path>
+                    <path d="M4 20l6.768-6.768m2.46-2.46l6.772-6.772"></path>
+                  </svg>
+                  <div class="h-1.5 w-8 bg-orange-600 rounded"></div>
+                </div>
+                <div class="space-y-1">
+                  <div class="h-1 w-full bg-neutral-200 rounded"></div>
+                  <div class="h-1 w-3/4 bg-neutral-200 rounded"></div>
+                  <div class="h-1 w-4/5 bg-neutral-200 rounded"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Copy -->
+          <h3 class="mt-6 text-3xl sm:text-4xl text-neutral-900 font-geist tracking-tighter" style="">
+            Automated Case Creation
+          </h3>
+          <p class="mt-2 text-sm sm:text-base text-neutral-600 max-w-[52ch] font-geist tracking-tight" style="">
+            Converts the intake conversation into a structured case file,
+            categorizes it, and routes it within the firm’s workflow with
+            urgency detection.
+          </p>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="lg:col-span-4 relative rounded-[28px] border border-neutral-200 bg-white p-6 sm:p-8 hover-lift h-full flex flex-col">
+          <span class="absolute -top-4 left-6 inline-flex items-center px-4 py-1.5 rounded-full border border-neutral-200 bg-white text-xs sm:text-sm text-neutral-800 font-geist tracking-tight" style="">
+            STEP 3
+          </span>
+          <!-- Visual -->
+          <div class="relative h-48 sm:h-56 rounded-2xl bg-neutral-100 border border-neutral-200 overflow-hidden p-4">
+            <div class="w-full h-full rounded-xl overflow-hidden bg-white border border-neutral-200 p-3">
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-6 bg-emerald-100 rounded-lg flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-600">
+                      <path d="M3 3v5h5"></path>
+                      <path d="M21 12A9 9 0 0 0 6 2.3L3 8"></path>
+                      <path d="M21 21v-5h-5"></path>
+                      <path d="M3 12a9 9 0 0 0 15 6.7L21 16"></path>
+                    </svg>
+                  </div>
+                  <div class="h-2 w-16 bg-neutral-900 rounded"></div>
+                </div>
+                <div class="w-4 h-4 bg-green-400 rounded-full"></div>
+              </div>
+              <div class="grid grid-cols-3 gap-2 mb-3">
+                <div class="bg-blue-50 border border-blue-200 rounded p-2 text-center">
+                  <div class="h-1 w-12 bg-blue-600 rounded mx-auto mb-1"></div>
+                  <div class="text-[10px] text-blue-700">I-130</div>
+                </div>
+                <div class="bg-emerald-50 border border-emerald-200 rounded p-2 text-center">
+                  <div class="h-1 w-10 bg-emerald-600 rounded mx-auto mb-1"></div>
+                  <div class="text-[10px] text-emerald-700">I-485</div>
+                </div>
+                <div class="bg-purple-50 border border-purple-200 rounded p-2 text-center">
+                  <div class="h-1 w-14 bg-purple-600 rounded mx-auto mb-1"></div>
+                  <div class="text-[10px] text-purple-700">N-400</div>
+                </div>
+              </div>
+              <div class="grid grid-cols-3 gap-2 mb-3">
+                <div class="bg-blue-50 border border-blue-200 rounded p-2 text-center">
+                  <div class="h-1 w-8 bg-blue-600 rounded mx-auto mb-1"></div>
+                  <div class="text-[10px] text-blue-700">I-765</div>
+                </div>
+                <div class="text-center bg-emerald-50 border-emerald-200 border rounded pt-2 pr-2 pb-2 pl-2">
+                  <div class="h-1 w-10 bg-emerald-600 rounded mx-auto mb-1"></div>
+                  <div class="text-[10px] text-emerald-700">I-131</div>
+                </div>
+                <div class="bg-purple-50 border border-purple-200 rounded p-2 text-center">
+                  <div class="h-1 w-12 bg-purple-600 rounded mx-auto mb-1"></div>
+                  <div class="text-[10px] text-purple-700">LETTERS</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Copy -->
+          <h3 class="mt-6 text-3xl sm:text-4xl text-neutral-900 font-geist tracking-tighter" style="">
+            AI Document Drafting Engine
+          </h3>
+          <p class="mt-2 text-sm sm:text-base text-neutral-600 max-w-[52ch] font-geist tracking-tight" style="">
+            Generates immigration forms (I-130, I-485, N-400, I-765, I-131),
+            supporting letters, and declarations with built‑in compliance and
+            consistency checks.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solutions -->
+    <section class="z-10 sm:p-8 animate-scaleIn animation-delay-500 bg-white w-full max-w-7xl border-neutral-200/70 border rounded-3xl mt-24 mr-auto ml-auto pt-6 pr-6 pb-6 pl-6 shadow-2xl" id="solutions">
+      <div class="flex gap-6 sm:px-0 animate-fadeInUp pr-1 pl-1 items-center">
+        <h2 class="text-[44px] sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.9] text-zinc-950 font-geist tracking-tighter">
+          Solutions.
+        </h2>
+        <span aria-hidden="true" role="separator" aria-orientation="vertical" class="w-px bg-neutral-200 h-10"></span>
+        <p class="sm:text-base text-sm text-zinc-400 mt-1 font-geist tracking-tight">
+          Built for immigration today, scalable to other legal domains
+        </p>
+      </div>
+      <div class="h-px animate-fadeIn animation-delay-100 bg-neutral-200 mt-4"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mt-6 sm:mt-8">
+        <div class="lg:col-span-6 animate-fadeInLeft animation-delay-200">
+          <div class="rounded-[24px] bg-white text-neutral-900 border border-neutral-200/70 shadow-2xl p-6 sm:p-8">
+            <h3 class="text-3xl sm:text-4xl font-geist tracking-tighter">
+              Boutique Firm
+            </h3>
+            <p class="text-neutral-600 mt-2 font-geist tracking-tight">
+              For small to mid-size immigration practices — stream intake to
+              drafts.
+            </p>
+
+            <ul class="mt-6 space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-neutral-900 text-white flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </span>
+                <span class="text-neutral-800 font-geist tracking-tight">
+                  AI receptionist with 24/7 multilingual call handling
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-neutral-900 text-white flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </span>
+                <span class="text-neutral-800 font-geist tracking-tight">
+                  Automated case creation and routing
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-neutral-900 text-white flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </span>
+                <span class="text-neutral-800 font-geist tracking-tight">
+                  Core immigration forms and supporting letters
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-neutral-900 text-white flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </span>
+                <span class="text-neutral-800 font-geist tracking-tight">
+                  Compliance validation against current USCIS standards
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-neutral-900 text-white flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </span>
+                <span class="text-neutral-800 font-geist tracking-tight">
+                  Secure client access and version control
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 animate-fadeInRight animation-delay-300">
+          <div class="sm:p-8 text-white bg-neutral-950 border-white/10 border rounded-[28px] pt-6 pr-6 pb-6 pl-6 relative shadow-2xl">
+            <h3 class="text-3xl sm:text-4xl font-geist tracking-tighter">
+              Firm Pro
+            </h3>
+            <p class="text-neutral-300 mt-2 font-geist tracking-tight">
+              Advanced automation for high‑volume teams and multi‑office firms.
+            </p>
+
+            <ul class="mt-6 space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-400 text-neutral-900 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </span>
+                <span class="font-geist tracking-tight">
+                  Full forms library + dynamic templates (PDF, Word)
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-400 text-neutral-900 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </span>
+                <span class="font-geist tracking-tight">
+                  Advanced compliance rules and consistency checks
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-400 text-neutral-900 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </span>
+                <span class="font-geist tracking-tight">
+                  DMS, calendar, billing, and client portal integrations
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-400 text-neutral-900 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </span>
+                <span class="font-geist tracking-tight">
+                  Analytics dashboard: accuracy, turnaround, satisfaction
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-400 text-neutral-900 flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </span>
+                <span class="font-geist tracking-tight">
+                  Team collaboration and role‑based access
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 animate-fadeInLeft animation-delay-400">
+          <div class="rounded-[24px] bg-gradient-to-br from-neutral-50 to-neutral-100/60 border border-neutral-200 p-6 sm:p-8">
+            <div class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-neutral-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="m22 21-3-3 3-3"></path>
+                <path d="M16 18h6"></path>
+              </svg>
+              <h4 class="text-xl text-neutral-900 font-geist tracking-tight">
+                Enterprise
+              </h4>
+            </div>
+            <p class="text-sm text-neutral-600 mt-3 max-w-[52ch] font-geist tracking-tight">
+              Custom solutions for large organizations with dedicated support,
+              private cloud options, and enterprise‑grade security.
+            </p>
+            <div class="mt-4 flex items-center gap-3">
+              <p class="text-sm text-neutral-900 font-geist tracking-tight">
+                Custom pricing
+              </p>
+              <span class="inline-flex items-center px-2 py-1 rounded-full text-xs text-blue-700 bg-blue-50 border border-blue-200 font-geist tracking-tight">
+                Contact Sales
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 animate-fadeInRight animation-delay-400">
+          <div class="rounded-[24px] bg-gradient-to-br from-neutral-50 to-neutral-100/60 border border-neutral-200 p-6 sm:p-8">
+            <div class="flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-neutral-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M12 1v6m0 6v6"></path>
+                <path d="m21 12-6-6m-6 6-6-6"></path>
+              </svg>
+              <h4 class="text-xl text-neutral-900 font-geist tracking-tight">
+                Integrations
+              </h4>
+            </div>
+            <p class="text-sm text-neutral-600 mt-3 max-w-[52ch] font-geist tracking-tight">
+              Document management, calendar scheduling, billing, and secure
+              client portals. Export to PDF/Word with version control.
+            </p>
+            <p class="mt-4 text-sm text-neutral-900 font-geist tracking-tight">
+              Available upon request
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="z-10 sm:p-8 animate-scaleIn animation-delay-600 text-white bg-neutral-950 w-full max-w-7xl border-white/10 border rounded-[28px] mt-24 mr-auto mb-6 ml-auto pt-6 pr-6 pb-6 pl-6 relative shadow-2xl" id="demo">
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden rounded-[28px] rounded-tr-[36px]">
+        <div class="absolute inset-0" style="background: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 10px 10px; opacity: 0.15;"></div>
+        <div class="absolute -right-20 -top-4 w-[420px] h-[420px] rounded-full bg-orange-500/10 blur-3xl"></div>
+        <div class="absolute -left-20 -bottom-20 w-[420px] h-[420px] rounded-full bg-emerald-500/5 blur-3xl"></div>
+      </div>
+
+      <div class="relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 sm:p-8 bg-gradient-to-b from-neutral-900 to-neutral-950 border-white/10 border rounded-[24px] pt-6 pr-6 pb-6 pl-6 items-center">
+          <div class="max-w-[620px]">
+            <p class="text-sm text-emerald-400 mb-3 font-geist tracking-tight">
+              Get Started
+            </p>
+            <h2 class="text-[44px] sm:text-6xl md:text-7xl leading-[1.05] tracking-tight font-geist font-semibold">
+              Ready to Transform Your Practice?
+            </h2>
+            <p class="sm:text-base text-sm text-neutral-300 mt-3 font-geist tracking-tight">
+              Schedule a demo to see how Magnara AI turns a single client
+              conversation into a ready‑to‑review immigration case file.
+            </p>
+
+            <div class="relative mt-6">
+              <a href="#demo-modal" class="inline-flex items-center justify-center px-6 py-3 rounded-full text-sm font-geist tracking-tight text-white border border-white/10 shadow-2xl" style="background: linear-gradient(180deg, #10b981, #059669); box-shadow: 0 12px 30px rgba(16,185,129,0.3), inset 0 1px 0 rgba(255,255,255,0.2);" onclick="event.preventDefault(); const modal = document.getElementById('demo-modal'); modal.classList.remove('hidden'); modal.classList.add('flex');">
+                SCHEDULE A DEMO
+              </a>
+              <div aria-hidden="true" class="pointer-events-none absolute -z-10 -bottom-2 left-0 right-0 h-10 mx-auto rounded-full" style="filter: blur(18px); background: radial-gradient(60% 60% at 50% 50%, rgba(16,185,129,0.35), rgba(16,185,129,0) 70%);"></div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="relative rounded-3xl border border-white/10 bg-neutral-900/60 overflow-hidden backdrop-blur-sm">
+              <div class="flex items-center justify-between px-4 py-3 border-b border-white/10 bg-neutral-900/60">
+                <div class="flex items-center gap-2">
+                  <span class="h-2 w-2 rounded-full bg-neutral-700"></span>
+                  <span class="h-2 w-2 rounded-full bg-neutral-700"></span>
+                  <span class="h-2 w-2 rounded-full bg-neutral-700"></span>
+                </div>
+                <div class="h-2 w-24 rounded bg-neutral-800"></div>
+              </div>
+              <div class="p-4 grid grid-cols-2 gap-3">
+                <div class="rounded-xl border border-white/10 bg-neutral-900/60 p-3">
+                  <div class="flex items-center justify-between mb-2">
+                    <div class="h-2 w-10 rounded bg-neutral-700"></div>
+                    <div class="h-2 w-6 rounded bg-emerald-500/60"></div>
+                  </div>
+                  <div class="h-6 w-24 rounded bg-neutral-800 mb-1"></div>
+                  <div class="h-1.5 w-3/4 rounded bg-emerald-500/40"></div>
+                </div>
+                <div class="rounded-xl border border-white/10 bg-neutral-900/60 p-3">
+                  <div class="flex items-center justify-between mb-2">
+                    <div class="h-2 w-10 rounded bg-neutral-700"></div>
+                    <div class="h-2 w-6 rounded bg-emerald-500/60"></div>
+                  </div>
+                  <div class="h-6 w-20 rounded bg-neutral-800 mb-1"></div>
+                  <div class="h-1.5 w-1/2 rounded bg-emerald-400/60"></div>
+                </div>
+                <div class="rounded-xl border border-white/10 bg-neutral-900/60 p-3 col-span-2">
+                  <div class="h-2 w-20 rounded bg-neutral-700 mb-3"></div>
+                  <div class="grid grid-cols-6 gap-1 items-end">
+                    <div class="h-6 bg-emerald-400/60 rounded"></div>
+                    <div class="h-10 bg-emerald-400/60 rounded"></div>
+                    <div class="h-14 bg-emerald-400/60 rounded"></div>
+                    <div class="h-20 bg-emerald-400/60 rounded"></div>
+                    <div class="h-12 bg-emerald-400/60 rounded"></div>
+                    <div class="h-16 bg-emerald-400/60 rounded"></div>
+                  </div>
+                </div>
+              </div>
+              <div aria-hidden="true" class="pointer-events-none absolute -right-10 -bottom-10 w-40 h-40 rounded-full bg-emerald-500/10 blur-2xl"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="h-px bg-white/5 mt-8 mb-6"></div>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-white" viewBox="0 0 48 48" aria-hidden="true" stroke-width="2">
+              <path d="M24 8 L40 36 H8 Z" fill="currentColor"></path>
+            </svg>
+            <span class="text-sm text-white font-geist tracking-tight">
+              Magnara AI
+            </span>
+            <span class="text-xs text-neutral-500 font-geist tracking-tight">
+              © 2025
+            </span>
+            <span class="w-1 h-1 rounded-full bg-neutral-700"></span>
+            <a href="#top" class="text-xs text-neutral-400 hover:text-neutral-300 transition-colors font-geist tracking-tight">
+              Privacy Policy
+            </a>
+          </div>
+
+          <nav class="flex items-center gap-6 text-sm text-neutral-400">
+            <a href="#workflows" class="hover:text-neutral-300 transition-colors font-geist tracking-tight">
+              Features
+            </a>
+            <a href="#top" class="hover:text-neutral-300 transition-colors font-geist tracking-tight">
+              About
+            </a>
+            <a href="#solutions" class="hover:text-neutral-300 transition-colors font-geist tracking-tight">
+              Pricing
+            </a>
+            <a href="#top" class="hover:text-neutral-300 transition-colors font-geist tracking-tight">
+              Changelog
+            </a>
+            <a href="#demo" class="hover:text-neutral-300 transition-colors font-geist tracking-tight">
+              Contact
+            </a>
+            <span class="hidden sm:inline-block w-px h-4 bg-white/10"></span>
+            <div class="hidden sm:flex items-center gap-4">
+              <a aria-label="LinkedIn" href="#" class="text-neutral-500 hover:text-neutral-300 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="linkedin" class="lucide lucide-linkedin w-5 h-5">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect width="4" height="12" x="2" y="9"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <a aria-label="Twitter" href="#" class="text-neutral-500 hover:text-neutral-300 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="twitter" class="lucide lucide-twitter w-5 h-5">
+                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                </svg>
+              </a>
+              <a aria-label="GitHub" href="#" class="text-neutral-500 hover:text-neutral-300 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="github" class="lucide lucide-github w-5 h-5">
+                  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                  <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                </svg>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <script>
+        lucide.createIcons();
+      </script>
+    </div>
+
+    <div id="demo-modal" class="hidden fixed inset-0 z-50 items-center justify-center bg-black/60 backdrop-blur-sm p-4" onclick="if(event.target === this) { this.classList.add('hidden'); this.classList.remove('flex'); }">
+      <div class="relative w-full max-w-md bg-white rounded-3xl border border-neutral-200 shadow-2xl p-8 animate-scaleIn" onclick="event.stopPropagation();">
+        <button onclick="event.preventDefault(); event.stopPropagation(); const modal = document.getElementById('demo-modal'); modal.classList.add('hidden'); modal.classList.remove('flex');" class="absolute top-4 right-4 text-neutral-400 hover:text-neutral-900 transition-colors" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+        <h3 class="text-3xl text-neutral-900 font-geist tracking-tighter mb-2">
+          Schedule a Demo
+        </h3>
+        <p class="text-sm text-neutral-600 font-geist tracking-tight mb-6">
+          Our team will get back to you within 24 hours.
+        </p>
+        <form onsubmit="" class="space-y-4" action="https://formsubmit.co/abdullah.msohail@gmail.com" method="POST">
+          <div>
+            <label for="demo-name" class="block text-sm text-neutral-700 font-geist tracking-tight mb-1">
+              Name
+            </label>
+            <input type="text" id="demo-name" required="" class="w-full px-4 py-3 rounded-xl border border-neutral-200 text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent font-geist tracking-tight" placeholder="Your full name" name="name">
+          </div>
+          <div>
+            <label for="demo-email" class="block text-sm text-neutral-700 font-geist tracking-tight mb-1">
+              Email Address
+            </label>
+            <input type="email" id="demo-email" required="" class="w-full px-4 py-3 rounded-xl border border-neutral-200 text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent font-geist tracking-tight" placeholder="your@email.com" name="email">
+          </div>
+          <div>
+            <label for="demo-firm" class="block text-sm text-neutral-700 font-geist tracking-tight mb-1">
+              Firm Name
+            </label>
+            <input type="text" id="demo-firm" required="" class="w-full px-4 py-3 rounded-xl border border-neutral-200 text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent font-geist tracking-tight" placeholder="Your firm name" name="firm">
+          </div>
+          <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 rounded-xl text-sm font-geist tracking-tight text-white bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 transition-colors shadow-lg">
+            Submit Request
+          </button>
+        </form>
+      </div>
+    </div>
+  
+</body></html>
