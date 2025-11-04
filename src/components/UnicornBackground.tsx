@@ -35,13 +35,22 @@ export default function UnicornBackground() {
 
   return (
     <div 
-      className={`absolute inset-0 -z-10 overflow-hidden transition-all duration-300 rounded-none ${
-        theme === 'light' 
-          ? 'bg-gradient-to-tr from-neutral-100 via-neutral-50 to-neutral-100' 
-          : 'bg-gradient-to-tr from-neutral-950 via-neutral-950/90 to-neutral-900/60'
-      }`}
+      className="absolute inset-0 -z-10 overflow-hidden rounded-none"
+      style={{
+        background: theme === 'light' 
+          ? 'linear-gradient(to top right, rgb(245, 245, 245), rgb(250, 250, 250), rgb(245, 245, 245))' 
+          : 'linear-gradient(to top right, rgb(10, 10, 10), rgba(10, 10, 10, 0.9), rgba(23, 23, 23, 0.6))',
+        transition: 'background 0.5s ease, filter 0.5s ease, opacity 0.5s ease'
+      }}
     >
-      <div className={`absolute inset-0 ${theme === 'light' ? 'saturate-50 brightness-125 opacity-30' : 'saturate-50 brightness-75'}`}>
+      <div 
+        className="absolute inset-0"
+        style={{
+          filter: theme === 'light' ? 'saturate(0.5) brightness(1.25)' : 'saturate(0.5) brightness(0.75)',
+          opacity: theme === 'light' ? 0.3 : 1,
+          transition: 'filter 0.5s ease, opacity 0.5s ease'
+        }}
+      >
         <div className="aura-background-component absolute w-full h-full top-0 left-0">
           <div 
             data-us-project="inzENTvhzS9plyop7Z6g" 
