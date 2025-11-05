@@ -2,6 +2,15 @@
 
 import { useEffect, useState } from 'react';
 
+declare global {
+  interface Window {
+    UnicornStudio?: {
+      isInitialized: boolean;
+      init?: () => void;
+    };
+  }
+}
+
 interface UnicornBackgroundProps {
   isIdle: boolean;
 }
@@ -11,14 +20,14 @@ export default function UnicornBackground({ isIdle }: UnicornBackgroundProps) {
 
   useEffect(() => {
     // Load UnicornStudio script
-    if (typeof window !== 'undefined' && !(window as any).UnicornStudio) {
-      (window as any).UnicornStudio = { isInitialized: false };
+    if (typeof window !== 'undefined' && !window.UnicornStudio) {
+      window.UnicornStudio = { isInitialized: false };
       const script = document.createElement('script');
       script.src = 'https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js';
       script.onload = function() {
-        if (!(window as any).UnicornStudio.isInitialized) {
-          (window as any).UnicornStudio.init();
-          (window as any).UnicornStudio.isInitialized = true;
+        if (window.UnicornStudio && !window.UnicornStudio.isInitialized && window.UnicornStudio.init) {
+          window.UnicornStudio.init();
+          window.UnicornStudio.isInitialized = true;
         }
       };
       (document.head || document.body).appendChild(script);

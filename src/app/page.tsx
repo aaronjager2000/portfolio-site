@@ -10,7 +10,6 @@ type Section = 'home' | 'projects' | 'info' | 'contact';
 export default function Home() {
   const [activeSection, setActiveSection] = useState<Section>('home');
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [mousePos, setMousePos] = useState({ x: 0.5, y: 0.5 }); // normalized 0-1
   const [isIdle, setIsIdle] = useState(false);
   const idleTimerRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -27,11 +26,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      // Normalize mouse position to 0-1 range
-      const x = e.clientX / window.innerWidth;
-      const y = e.clientY / window.innerHeight;
-      setMousePos({ x, y });
+    const handleMouseMove = () => {
       setIsIdle(false);
 
       // Reset idle timer
@@ -58,31 +53,6 @@ export default function Home() {
     <>
       {/* Full viewport background - Never re-renders */}
       <div className="fixed inset-0 -z-10" style={{ background: 'var(--background)' }} />
-      
-      {/* Glow effect - Follows cursor */}
-      <div className="fixed inset-0 -z-5 flex items-center justify-center pointer-events-none">
-        <div 
-          className="w-[800px] h-[800px] rounded-full blur-[120px] opacity-40"
-          style={{
-            background: isIdle 
-              ? 'radial-gradient(circle, rgba(52, 211, 153, 0.3) 0%, rgba(16, 185, 129, 0.2) 30%, transparent 70%)'
-              : `conic-gradient(from ${Math.atan2(mousePos.y - 0.5, mousePos.x - 0.5) * (180 / Math.PI) + 90}deg at 50% 50%, 
-                  rgba(52, 211, 153, 0.5) 0deg, 
-                  rgba(52, 211, 153, 0.4) 30deg,
-                  rgba(16, 185, 129, 0.3) 60deg,
-                  rgba(16, 185, 129, 0.2) 90deg,
-                  rgba(16, 185, 129, 0.1) 150deg,
-                  transparent 180deg,
-                  transparent 270deg,
-                  rgba(16, 185, 129, 0.1) 300deg,
-                  rgba(52, 211, 153, 0.3) 330deg,
-                  rgba(52, 211, 153, 0.5) 360deg)`,
-            transition: isIdle ? 'background 2s ease' : 'background 0.1s ease',
-            transform: 'translateZ(0)',
-            willChange: 'background'
-          }}
-        />
-      </div>
       
       {/* Content container with border - Never re-renders */}
       <div className="fixed inset-6 md:inset-8 lg:inset-10 overflow-hidden" style={{ borderColor: 'var(--foreground)', borderWidth: '0.5px', borderStyle: 'solid' }}>
