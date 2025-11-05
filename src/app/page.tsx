@@ -137,12 +137,12 @@ export default function Home() {
                   { 
                     title: "DataPilot", 
                     desc: "Enterprise-grade analytics platform with AI-powered insights, automated trend detection, pattern recognition, and data transformation capabilities supporting CSV, Excel, and JSON formats.", 
-                    url: "https://github.com/aaronjager2000/datapilot" 
+                    url: "https://datapilot-landing.vercel.app/" 
                   },
                   { 
-                    title: "Competence Collective", 
-                    desc: "Professional services website built with modern web technologies, featuring responsive design and optimized user experience for client engagement and business showcase.", 
-                    url: "https://www.competencecollective.com" 
+                    title: "Dijkstra's Algorithm Visualizer", 
+                    desc: "Simple visualizer for Dijkstra's pathfinding algorithm using React with JavaScript.", 
+                    url: "https://github.com/aaronjager2000/djikstras-algo" 
                   },
                   { 
                     title: "Apex Ecom", 
