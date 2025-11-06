@@ -103,7 +103,7 @@ export default function Home() {
             className={`section-content ${activeSection === 'home' && !isTransitioning ? 'section-active' : 'section-hidden'}`}
           >
             <div className="absolute top-6 left-6 md:top-8 md:left-8 text-center">
-              <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-2" style={{ color: 'var(--foreground)' }}>
+              <h1 className="text-4xl md:text-5xl font-medium tracking-tight mb-2" style={{ color: 'var(--foreground)' }}>
                 Aaron Grant
               </h1>
               <h2 className="text-sm md:text-base tracking-tight opacity-80" style={{ color: 'var(--foreground)' }}>
@@ -113,7 +113,7 @@ export default function Home() {
             
             <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 max-w-[200px] md:max-w-[240px]">
               <p className="text-xs md:text-sm leading-relaxed tracking-tight opacity-70" style={{ color: 'var(--foreground)' }}>
-                Founder and full-stack engineer crafting calm, immersive user experiences. I love turning complex problems into modular systems that work together effortlessly; integrating precision, performance, and purpose into every interaction.
+              Full-stack engineer and founder. I believe the best interfaces disappear. With a mission to create effortless interactions, I transform complex problems into modular systems that integrate precision, performance, and purpose.
           </p>
         </div>
           </div>
@@ -122,7 +122,7 @@ export default function Home() {
           <div 
             className={`section-content ${activeSection === 'projects' && !isTransitioning ? 'section-active' : 'section-hidden'}`}
           >
-            <h2 className="absolute top-6 left-0 right-0 md:top-8 text-3xl md:text-4xl font-semibold tracking-tight text-center" style={{ color: 'var(--foreground)' }}>
+            <h2 className="absolute top-6 left-0 right-0 md:top-8 text-3xl md:text-4xl font-medium tracking-tight text-center" style={{ color: 'var(--foreground)' }}>
               Projects
             </h2>
             <div className="absolute inset-0 flex items-center justify-center p-8 md:p-12">
@@ -176,17 +176,17 @@ export default function Home() {
           <div 
             className={`section-content ${activeSection === 'info' && !isTransitioning ? 'section-active' : 'section-hidden'}`}
           >
-            <h2 className="absolute top-6 left-0 right-0 md:top-8 text-3xl md:text-4xl font-semibold tracking-tight text-center" style={{ color: 'var(--foreground)' }}>
+            <h2 className="absolute top-6 left-0 right-0 md:top-8 text-3xl md:text-4xl font-medium tracking-tight text-center" style={{ color: 'var(--foreground)' }}>
               Philosophy & Approach
             </h2>
             <div className="absolute inset-0 flex items-center justify-center p-8 md:p-12">
               <div className="max-w-2xl text-center">
                 <div className="space-y-6" style={{ paddingBottom: '4rem' }}>
                   <p className="text-base leading-relaxed tracking-tight opacity-80" style={{ color: 'var(--foreground)' }}>
-                    I believe the best digital experiences are invisible — they anticipate needs, remove friction, and leave users feeling effortlessly empowered.
+                    I believe the best digital experiences are invisible; they anticipate needs, remove friction, and leave users feeling effortlessly empowered.
                   </p>
                   <p className="text-sm leading-relaxed tracking-tight opacity-70" style={{ color: 'var(--foreground)' }}>
-                    My approach combines precision engineering with thoughtful design. I build modular, scalable systems that integrate AI, modern web frameworks, and performance optimization.
+                    My approach combines precision engineering with thoughtful design. I build modular, scalable systems that integrate AI, modern web frameworks, and performance optimization to craft beautiful solutions to existing problems.
                   </p>
                 </div>
                 <div>
@@ -243,11 +243,12 @@ export default function Home() {
             className={`section-content ${activeSection === 'contact' && !isTransitioning ? 'section-active' : 'section-hidden'}`}
           >
             <div className="absolute top-6 right-6 md:top-8 md:right-8 text-right max-w-[280px] md:max-w-[320px]">
-              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3" style={{ color: 'var(--foreground)' }}>
+              <h2 className="text-3xl md:text-4xl font-medium tracking-tight mb-3" style={{ color: 'var(--foreground)' }}>
                 Let&apos;s Connect
               </h2>
               <p className="text-xs md:text-sm leading-relaxed tracking-tight opacity-70 mb-6" style={{ color: 'var(--foreground)' }}>
-                Available for freelance & collaborations — let&apos;s create something exceptional.
+                Available for freelance & collaborations.<br />
+                Let&apos;s create something exceptional.
               </p>
               
               <div className="space-y-4">
