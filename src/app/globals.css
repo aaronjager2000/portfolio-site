@@ -170,3 +170,45 @@ textarea::placeholder {
 .project-glass-card:hover::before {
   opacity: 1;
 }
+
+/* Inner scroll surface for section content on small screens */
+@media (max-width: 640px) {
+  .inner-scroll {
+    position: absolute;
+    inset: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* Leave room for the top nav title and bottom safe area */
+    padding-top: calc(env(safe-area-inset-top) + 64px);
+    padding-bottom: calc(env(safe-area-inset-bottom) + 80px);
+  }
+}
+
+/* Mobile sizing for project cards */
+@media (max-width: 640px) {
+  .project-glass-card {
+    padding: 1rem;
+    min-height: 160px;
+    border-radius: 18px;
+  }
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .project-glass-card {
+    transition: opacity 0.2s ease;
+  }
+
+  .project-glass-card:hover {
+    transform: none;
+  }
+}
