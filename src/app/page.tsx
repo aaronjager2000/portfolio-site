@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Mail, Github, Linkedin } from 'lucide-react';
+import { Mail, Github, Linkedin, Twitter } from 'lucide-react';
 import ThemeToggle from "@/components/ThemeToggle";
 import UnicornBackground from "@/components/UnicornBackground";
 
@@ -429,13 +429,25 @@ export default function Home() {
               
               <div className="space-y-3">
                 <a
-                  href="mailto:aarongrantse@gmail.com"
+                  href="mailto:aaron@magnara.ai"
                   className="flex items-center justify-end gap-3 py-2.5 hover:opacity-70 transition-opacity group min-h-[44px]"
                 >
                   <span className="text-[13px] sm:text-xs md:text-sm tracking-tight" style={{ color: 'var(--foreground)' }}>
-                    aarongrantse@gmail.com
+                    aaron@magnara.ai
                   </span>
                   <Mail size={18} style={{ color: 'var(--foreground)' }} className="opacity-60 group-hover:opacity-100 transition-opacity shrink-0" />
+                </a>
+                
+                <a
+                  href="https://twitter.com/0xaaronjager"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-end gap-3 py-2.5 hover:opacity-70 transition-opacity group min-h-[44px]"
+                >
+                  <span className="text-[13px] sm:text-xs md:text-sm tracking-tight" style={{ color: 'var(--foreground)' }}>
+                    @0xaaronjager
+                  </span>
+                  <Twitter size={18} style={{ color: 'var(--foreground)' }} className="opacity-60 group-hover:opacity-100 transition-opacity shrink-0" />
                 </a>
                 
                 <a
