@@ -313,12 +313,17 @@ export default function Home() {
                       'Next.js',
                       'Tailwind CSS',
                       'Framer Motion',
+                      'Python',
+                      'Node.js / REST APIs',
                       'Express / FastAPI',
                       'GraphQL',
                       'Prisma / MongoDB',
                       'LangChain',
+                      'Docker / Railway',
+                      'Jupyter / FastAPI',
                       'OpenAI',
-                      'Vercel / AWS'
+                      'Vercel / AWS',
+                      'Figma'
                     ].map((tool, i) => (
                       <div
                         key={i}
@@ -376,12 +381,17 @@ export default function Home() {
                     'Next.js',
                     'Tailwind CSS',
                     'Framer Motion',
+                    'Python',
+                    'Node.js / REST APIs',
                     'Express / FastAPI',
                     'GraphQL',
                     'Prisma / MongoDB',
                     'LangChain',
+                    'Docker / Railway',
+                    'Jupyter / FastAPI',
                     'OpenAI',
-                    'Vercel / AWS'
+                    'Vercel / AWS',
+                    'Figma'
                   ].map((tool, i) => (
                     <div
                       key={i}
