@@ -11,6 +11,7 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState<Section>('home');
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isIdle, setIsIdle] = useState(false);
+  const [showLoader, setShowLoader] = useState(true);
   const idleTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleSectionChange = (section: Section) => {
@@ -49,8 +50,19 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    const timer = setTimeout(() => setShowLoader(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
+      {showLoader && (
+        <div className="loading-overlay">
+          <span>Aaron Grant | Portfolio</span>
+        </div>
+      )}
+
       {/* Full viewport background - Never re-renders */}
       <div className="fixed inset-0 -z-10" style={{ background: 'var(--background)' }} />
       
@@ -99,7 +111,7 @@ export default function Home() {
         {/* Mobile bottom navigation pill */}
         <nav className="sm:hidden absolute left-0 right-0 bottom-0 z-50 px-4 pb-[calc(env(safe-area-inset-bottom)+12px)]">
           <div
-            className="mx-auto max-w-md rounded-2xl border backdrop-blur-md"
+            className="mx-auto max-w-md rounded-t-2xl rounded-b-none border backdrop-blur-md"
             style={{
               borderColor: 'var(--foreground)',
               borderWidth: '0.5px',
@@ -160,7 +172,7 @@ export default function Home() {
             
             <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 max-w-[220px] sm:max-w-[240px]">
               <p className="text-[13px] leading-6 md:text-sm md:leading-relaxed tracking-tight opacity-70" style={{ color: 'var(--foreground)' }}>
-              Full-stack engineer and founder. I believe the best interfaces disappear. With a mission to create effortless interactions, I transform complex problems into modular systems that integrate precision, performance, and purpose.
+              As a full-stack engineer and founder, I believe the best interfaces are silent. With a mission to create effortless interactions, I transform complex problems into modular systems, pursuing new expressions through my thoughts.
           </p>
         </div>
           </div>
@@ -222,11 +234,11 @@ export default function Home() {
             
             {/* Mobile scrollable version */}
             <div className="inner-scroll sm:hidden">
-              <h2 className="sticky top-0 z-10 text-2xl font-medium tracking-tight text-center pb-4 backdrop-blur-sm" style={{ color: 'var(--foreground)' }}>
+              <h2 className="text-2xl font-medium tracking-tight text-center pb-4" style={{ color: 'var(--foreground)' }}>
                 Projects
               </h2>
               
-              <div className="mx-auto max-w-5xl">
+              <div className="mx-auto max-w-5xl mt-4">
                 <div className="grid grid-cols-1 gap-4">
                   {[
                     { 
@@ -341,11 +353,11 @@ export default function Home() {
             
             {/* Mobile scrollable version */}
             <div className="inner-scroll sm:hidden">
-              <h2 className="sticky top-0 z-10 text-2xl font-medium tracking-tight text-center pb-3 backdrop-blur-sm" style={{ color: 'var(--foreground)' }}>
+              <h2 className="text-2xl font-medium tracking-tight text-center pb-3" style={{ color: 'var(--foreground)' }}>
                 Philosophy & Approach
               </h2>
               
-              <div className="mx-auto max-w-176 text-center space-y-5">
+              <div className="mx-auto max-w-176 text-center space-y-5 mt-4">
                 <p className="text-[13px] sm:text-sm leading-6 sm:leading-7 tracking-tight opacity-80" style={{ color: 'var(--foreground)' }}>
                   I believe the best digital experiences are invisible; they anticipate needs, remove friction, and leave users feeling effortlessly empowered.
                 </p>
