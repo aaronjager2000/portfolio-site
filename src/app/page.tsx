@@ -162,10 +162,10 @@ export default function Home() {
             className={`section-content ${activeSection === 'home' && !isTransitioning ? 'section-active' : 'section-hidden'}`}
           >
             <div className="absolute top-6 left-6 md:top-8 md:left-8 text-center max-w-[80%]">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight mb-2" style={{ color: 'var(--foreground)' }}>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight mb-2" style={{ color: 'var(--foreground)' }}>
                 Aaron Grant
               </h1>
-              <h2 className="text-[13px] sm:text-sm md:text-base tracking-tight opacity-80" style={{ color: 'var(--foreground)' }}>
+              <h2 className="text-[13px] sm:text-sm md:text-base tracking-tight opacity-80 font-light" style={{ color: 'var(--foreground)' }}>
                 Co-Founder of Magnara.AI
               </h2>
             </div>
@@ -182,7 +182,7 @@ export default function Home() {
             className={`section-content ${activeSection === 'projects' && !isTransitioning ? 'section-active' : 'section-hidden'}`}
           >
             <div className="hidden sm:block absolute top-6 left-0 right-0 md:top-8 text-center">
-              <h2 className="text-3xl md:text-4xl font-medium tracking-tight" style={{ color: 'var(--foreground)' }}>
+              <h2 className="text-3xl md:text-4xl font-light tracking-tight" style={{ color: 'var(--foreground)' }}>
                 Projects
               </h2>
             </div>
@@ -234,7 +234,7 @@ export default function Home() {
             
             {/* Mobile scrollable version */}
             <div className="inner-scroll sm:hidden">
-              <h2 className="text-2xl font-medium tracking-tight text-center pb-4" style={{ color: 'var(--foreground)' }}>
+              <h2 className="text-2xl font-light tracking-tight text-center pb-4" style={{ color: 'var(--foreground)' }}>
                 Projects
               </h2>
               
@@ -289,7 +289,7 @@ export default function Home() {
             className={`section-content ${activeSection === 'info' && !isTransitioning ? 'section-active' : 'section-hidden'}`}
           >
             <div className="hidden sm:block absolute top-6 left-0 right-0 md:top-8 text-center">
-              <h2 className="text-3xl md:text-4xl font-medium tracking-tight" style={{ color: 'var(--foreground)' }}>
+              <h2 className="text-3xl md:text-4xl font-light tracking-tight" style={{ color: 'var(--foreground)' }}>
                 Philosophy & Approach
               </h2>
             </div>
@@ -353,7 +353,7 @@ export default function Home() {
             
             {/* Mobile scrollable version */}
             <div className="inner-scroll sm:hidden">
-              <h2 className="text-2xl font-medium tracking-tight text-center pb-3" style={{ color: 'var(--foreground)' }}>
+              <h2 className="text-2xl font-light tracking-tight text-center pb-3" style={{ color: 'var(--foreground)' }}>
                 Philosophy & Approach
               </h2>
               
@@ -419,7 +419,7 @@ export default function Home() {
             className={`section-content ${activeSection === 'contact' && !isTransitioning ? 'section-active' : 'section-hidden'}`}
           >
             <div className="absolute top-6 right-6 md:top-8 md:right-8 text-right max-w-[280px] md:max-w-[320px]">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight mb-3" style={{ color: 'var(--foreground)' }}>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight mb-3" style={{ color: 'var(--foreground)' }}>
                 Let&apos;s Connect
               </h2>
               <p className="text-[13px] sm:text-xs md:text-sm leading-relaxed tracking-tight opacity-70 mb-6" style={{ color: 'var(--foreground)' }}>
