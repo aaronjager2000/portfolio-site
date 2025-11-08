@@ -321,6 +321,7 @@ export default function Home() {
                       'LangChain',
                       'Docker / Railway',
                       'Jupyter / FastAPI',
+                      'C# / .NET',
                       'OpenAI',
                       'Vercel / AWS',
                       'Figma'
@@ -389,6 +390,7 @@ export default function Home() {
                     'LangChain',
                     'Docker / Railway',
                     'Jupyter / FastAPI',
+                    'C# / .NET',
                     'OpenAI',
                     'Vercel / AWS',
                     'Figma'
