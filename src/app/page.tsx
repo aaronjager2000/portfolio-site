@@ -309,7 +309,7 @@ export default function Home() {
                   </h3>
                   <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
                     {[
-                      'React',
+                      'React / TypeScript',
                       'Next.js',
                       'Tailwind CSS',
                       'Framer Motion',
@@ -378,7 +378,7 @@ export default function Home() {
                 </h3>
                 <div className="flex flex-wrap justify-center gap-2.5 max-w-4xl mx-auto">
                   {[
-                    'React',
+                    'React / TypeScript',
                     'Next.js',
                     'Tailwind CSS',
                     'Framer Motion',
