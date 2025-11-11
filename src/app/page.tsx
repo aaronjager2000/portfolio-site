@@ -228,7 +228,7 @@ export default function Home() {
                     { 
                       title: "DataPilot", 
                       desc: "Enterprise-grade analytics platform with AI-powered insights, automated trend detection, pattern recognition, and data transformation capabilities supporting CSV, Excel, and JSON formats.", 
-                      url: "https://datapilot-landing.vercel.app/" 
+                      url: "https://github.com/aaronjager2000/datapilot"
                     },
                     { 
                       title: "Dijkstra's Algorithm Visualizer", 
