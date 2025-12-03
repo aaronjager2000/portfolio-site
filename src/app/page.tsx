@@ -71,38 +71,58 @@ export default function Home() {
         {/* Background animation - Controlled by cursor activity */}
         <UnicornBackground isIdle={isIdle} />
         
+        {/* Static Name Header - Desktop - Never re-renders */}
+        <div className="hidden sm:block absolute top-6 left-6 z-50">
+          <h1 className="font-light tracking-tight mb-2" style={{ color: 'var(--foreground)', fontSize: '48px' }}>
+            Aaron Grant
+          </h1>
+          <h2 className="tracking-tight opacity-80 font-light" style={{ color: 'var(--foreground)', fontSize: '16px' }}>
+            Founder and Developer
+          </h2>
+        </div>
+
+        {/* Static Name Header - Mobile - Never re-renders */}
+        <div className="sm:hidden absolute top-6 left-6 z-50">
+          <h1 className="text-[2.5rem] leading-[1.1] font-light tracking-tight mb-1" style={{ color: 'var(--foreground)' }}>
+            Aaron Grant
+          </h1>
+          <h2 className="text-sm tracking-tight opacity-70 font-light" style={{ color: 'var(--foreground)' }}>
+            Founder and Developer
+          </h2>
+        </div>
+
         {/* Desktop Navigation - Never re-renders */}
-        <nav className="hidden sm:block absolute top-0 left-0 right-0 z-50 px-6 py-6 md:py-8">
-          <div className="max-w-7xl mx-auto flex items-center justify-end">
-            <div className="flex items-center gap-6 md:gap-8 text-sm" style={{ color: 'var(--foreground)' }}>
-              <button 
-                onClick={() => handleSectionChange('home')}
-                className={`hover:opacity-100 transition-opacity tracking-tight ${activeSection === 'home' ? 'opacity-100' : 'opacity-50'}`}
-                style={{ color: 'var(--foreground)' }}
-              >
-                Home
-              </button>
-              <button 
-                onClick={() => handleSectionChange('projects')}
-                className={`hover:opacity-100 transition-opacity tracking-tight ${activeSection === 'projects' ? 'opacity-100' : 'opacity-50'}`}
-                style={{ color: 'var(--foreground)' }}
-              >
-                Projects
-              </button>
-              <button 
-                onClick={() => handleSectionChange('info')}
-                className={`hover:opacity-100 transition-opacity tracking-tight ${activeSection === 'info' ? 'opacity-100' : 'opacity-50'}`}
-                style={{ color: 'var(--foreground)' }}
-              >
-                About
-              </button>
-              <button 
-                onClick={() => handleSectionChange('contact')}
-                className={`hover:opacity-100 transition-opacity tracking-tight ${activeSection === 'contact' ? 'opacity-100' : 'opacity-50'}`}
-                style={{ color: 'var(--foreground)' }}
-              >
-                Contact
-              </button>
+        <nav className="hidden sm:block absolute top-6 right-6 z-50">
+          <div className="flex flex-col items-end gap-3" style={{ color: 'var(--foreground)', fontSize: '14px' }}>
+            <button
+              onClick={() => handleSectionChange('home')}
+              className={`hover:opacity-100 transition-opacity tracking-tight ${activeSection === 'home' ? 'opacity-100' : 'opacity-50'}`}
+              style={{ color: 'var(--foreground)' }}
+            >
+              Home
+            </button>
+            <button
+              onClick={() => handleSectionChange('projects')}
+              className={`hover:opacity-100 transition-opacity tracking-tight ${activeSection === 'projects' ? 'opacity-100' : 'opacity-50'}`}
+              style={{ color: 'var(--foreground)' }}
+            >
+              Projects
+            </button>
+            <button
+              onClick={() => handleSectionChange('info')}
+              className={`hover:opacity-100 transition-opacity tracking-tight ${activeSection === 'info' ? 'opacity-100' : 'opacity-50'}`}
+              style={{ color: 'var(--foreground)' }}
+            >
+              About
+            </button>
+            <button
+              onClick={() => handleSectionChange('contact')}
+              className={`hover:opacity-100 transition-opacity tracking-tight ${activeSection === 'contact' ? 'opacity-100' : 'opacity-50'}`}
+              style={{ color: 'var(--foreground)' }}
+            >
+              Contact
+            </button>
+            <div className="mt-1">
               <ThemeToggle />
             </div>
           </div>
@@ -167,22 +187,13 @@ export default function Home() {
         {/* Content area - Only this animates */}
         <div className="absolute inset-0 z-10">
           {/* HOME */}
-          <div 
+          <div
             className={`section-content ${activeSection === 'home' && !isTransitioning ? 'section-active' : 'section-hidden'}`}
           >
             {/* Desktop layout */}
             <div className="hidden sm:block">
-              <div className="absolute top-6 left-6 md:top-8 md:left-8 text-center max-w-[80%]">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight mb-2" style={{ color: 'var(--foreground)' }}>
-                  Aaron Grant
-                </h1>
-                <h2 className="text-[13px] sm:text-sm md:text-base tracking-tight opacity-80 font-light" style={{ color: 'var(--foreground)' }}>
-                  Co-Founder of Magnara.AI
-                </h2>
-              </div>
-              
-              <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 max-w-[220px] sm:max-w-[240px]">
-                <p className="text-[13px] leading-6 md:text-sm md:leading-relaxed tracking-tight opacity-70" style={{ color: 'var(--foreground)' }}>
+              <div className="absolute bottom-6 left-6 max-w-[240px]">
+                <p className="tracking-tight opacity-70" style={{ color: 'var(--foreground)', fontSize: '14px', lineHeight: '1.7' }}>
                   As a full-stack engineer and founder, I believe the best interfaces are silent. With a mission to create effortless interactions, I transform complex problems into seamless integrations, pursuing new expressions through my thoughts.
                 </p>
               </div>
@@ -190,15 +201,6 @@ export default function Home() {
 
             {/* Mobile layout - p5aholic style */}
             <div className="sm:hidden">
-              <div className="absolute top-6 left-6">
-                <h1 className="text-[2.5rem] leading-[1.1] font-light tracking-tight mb-1" style={{ color: 'var(--foreground)' }}>
-                  Aaron Grant
-                </h1>
-                <h2 className="text-sm tracking-tight opacity-70 font-light" style={{ color: 'var(--foreground)' }}>
-                  Co-Founder of Magnara.AI
-                </h2>
-              </div>
-              
               <div className="absolute bottom-6 right-6 max-w-[280px] text-right">
                 <p className="text-[13px] leading-[1.75] tracking-tight opacity-70 font-light" style={{ color: 'var(--foreground)' }}>
                   As a full-stack engineer and founder, I believe the best interfaces are silent. With a mission to create effortless interactions, I transform complex problems into seamless integrations, pursuing new expressions through my thoughts.
@@ -208,15 +210,10 @@ export default function Home() {
           </div>
 
           {/* PROJECTS */}
-          <div 
+          <div
             className={`section-content ${activeSection === 'projects' && !isTransitioning ? 'section-active' : 'section-hidden'}`}
           >
-            <div className="hidden sm:block absolute top-6 left-0 right-0 md:top-8 text-center">
-              <h2 className="text-3xl md:text-4xl font-light tracking-tight" style={{ color: 'var(--foreground)' }}>
-                Projects
-              </h2>
-            </div>
-            <div className="hidden sm:flex absolute inset-0 items-center justify-center p-8 md:p-12">
+            <div className="hidden sm:flex absolute inset-0 items-center justify-center p-12">
               <div className="max-w-5xl w-full">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   {[
@@ -249,10 +246,10 @@ export default function Home() {
                       className="project-glass-card group"
                     >
                       <div className="relative z-10">
-                        <h3 className="text-xl md:text-2xl font-medium tracking-tight mb-2 group-hover:opacity-80 transition-opacity" style={{ color: 'var(--foreground)' }}>
+                        <h3 className="font-medium tracking-tight mb-2 group-hover:opacity-80 transition-opacity" style={{ color: 'var(--foreground)', fontSize: '24px' }}>
                           {project.title}
                         </h3>
-                        <p className="text-sm md:text-base opacity-60 tracking-tight leading-relaxed" style={{ color: 'var(--foreground)' }}>
+                        <p className="opacity-60 tracking-tight" style={{ color: 'var(--foreground)', fontSize: '16px', lineHeight: '1.6' }}>
                           {project.desc}
                         </p>
                       </div>
@@ -263,7 +260,7 @@ export default function Home() {
             </div>
             
             {/* Mobile scrollable version - p5aholic style */}
-            <div className="sm:hidden absolute inset-0 overflow-y-auto pl-6 pr-7 pt-6 pb-20">
+            <div className="sm:hidden absolute inset-0 overflow-y-auto px-6 pt-6 pb-20">
               <div className="space-y-12 ml-auto text-right" style={{ maxWidth: 'calc(100% - 4px)' }}>
                 {[
                   { 
@@ -315,26 +312,21 @@ export default function Home() {
           </div>
 
           {/* INFO */}
-          <div 
+          <div
             className={`section-content ${activeSection === 'info' && !isTransitioning ? 'section-active' : 'section-hidden'}`}
           >
-            <div className="hidden sm:block absolute top-6 left-0 right-0 md:top-8 text-center">
-              <h2 className="text-3xl md:text-4xl font-light tracking-tight" style={{ color: 'var(--foreground)' }}>
-                Philosophy & Approach
-              </h2>
-            </div>
-            <div className="hidden sm:flex absolute inset-0 items-center justify-center p-8 md:p-12">
+            <div className="hidden sm:flex absolute inset-0 items-center justify-center p-12">
               <div className="max-w-2xl text-center">
                 <div className="space-y-6" style={{ paddingBottom: '4rem' }}>
-                  <p className="text-base leading-relaxed tracking-tight opacity-80" style={{ color: 'var(--foreground)' }}>
+                  <p className="tracking-tight opacity-80" style={{ color: 'var(--foreground)', fontSize: '16px', lineHeight: '1.6' }}>
                     I believe the best digital experiences are invisible; they anticipate needs, remove friction, and leave users feeling effortlessly empowered.
                   </p>
-                  <p className="text-sm leading-relaxed tracking-tight opacity-70" style={{ color: 'var(--foreground)' }}>
+                  <p className="tracking-tight opacity-70" style={{ color: 'var(--foreground)', fontSize: '14px', lineHeight: '1.6' }}>
                     My approach combines precision engineering with thoughtful design. I build modular, scalable systems that integrate AI, modern web frameworks, and performance optimization to craft beautiful solutions to existing problems.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xs uppercase tracking-wider opacity-50" style={{ color: 'var(--foreground)', paddingBottom: '2rem' }}>
+                  <h3 className="uppercase tracking-wider opacity-50" style={{ color: 'var(--foreground)', fontSize: '12px', paddingBottom: '2rem' }}>
                     Tools & Technologies
                   </h3>
                   <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
@@ -359,7 +351,7 @@ export default function Home() {
                       <div
                         key={i}
                         className="relative flex items-center justify-center px-4 py-3 min-h-[56px] rounded-2xl backdrop-blur-md border overflow-hidden group cursor-default transition-all duration-300"
-                        style={{ 
+                        style={{
                           borderColor: 'var(--foreground)',
                           borderWidth: '0.5px',
                           backgroundColor: 'rgba(255, 255, 255, 0.02)',
@@ -370,7 +362,7 @@ export default function Home() {
                           minWidth: '140px'
                         }}
                       >
-                        <span className="relative z-10 text-xs md:text-sm tracking-tight font-medium" style={{ color: 'var(--foreground)' }}>
+                        <span className="relative z-10 tracking-tight font-medium" style={{ color: 'var(--foreground)', fontSize: '14px' }}>
                           {tool}
                         </span>
                         <div 
@@ -388,7 +380,7 @@ export default function Home() {
             </div>
             
             {/* Mobile scrollable version - p5aholic style */}
-            <div className="sm:hidden absolute left-6 right-6 top-[260px]">
+            <div className="sm:hidden absolute inset-x-6 top-[240px]">
               <div className="max-w-[320px] mx-auto text-center">
                 <div className="space-y-4">
                   <p className="text-[12px] leading-[1.65] tracking-tight opacity-80 font-light" style={{ color: 'var(--foreground)' }}>
@@ -433,60 +425,60 @@ export default function Home() {
           </div>
 
           {/* CONTACT */}
-          <div 
+          <div
             className={`section-content ${activeSection === 'contact' && !isTransitioning ? 'section-active' : 'section-hidden'}`}
           >
-            <div className="absolute top-6 right-6 md:top-8 md:right-8 text-right max-w-[280px] md:max-w-[320px]">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-light tracking-tight mb-3" style={{ color: 'var(--foreground)' }}>
+            <div className="hidden sm:block absolute bottom-6 right-6 text-right max-w-[320px]">
+              <h2 className="font-light tracking-tight mb-3" style={{ color: 'var(--foreground)', fontSize: '40px' }}>
                 Let&apos;s Connect
               </h2>
-              <p className="text-[13px] sm:text-xs md:text-sm leading-relaxed tracking-tight opacity-70 mb-6" style={{ color: 'var(--foreground)' }}>
+              <p className="tracking-tight opacity-70 mb-6" style={{ color: 'var(--foreground)', fontSize: '14px', lineHeight: '1.6' }}>
                 Available for freelance & collaborations.<br />
                 Let&apos;s create something exceptional.
               </p>
-              
+
               <div className="space-y-3">
                 <a
                   href="mailto:aaron@magnara.ai"
                   className="flex items-center justify-end gap-3 py-2.5 hover:opacity-70 transition-opacity group min-h-[44px]"
                 >
-                  <span className="text-[13px] sm:text-xs md:text-sm tracking-tight" style={{ color: 'var(--foreground)' }}>
+                  <span className="tracking-tight" style={{ color: 'var(--foreground)', fontSize: '14px' }}>
                     aaron@magnara.ai
                   </span>
                   <Mail size={18} style={{ color: 'var(--foreground)' }} className="opacity-60 group-hover:opacity-100 transition-opacity shrink-0" />
                 </a>
-                
+
                 <a
                   href="https://twitter.com/0xaaronjager"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-end gap-3 py-2.5 hover:opacity-70 transition-opacity group min-h-[44px]"
                 >
-                  <span className="text-[13px] sm:text-xs md:text-sm tracking-tight" style={{ color: 'var(--foreground)' }}>
+                  <span className="tracking-tight" style={{ color: 'var(--foreground)', fontSize: '14px' }}>
                     @0xaaronjager
                   </span>
                   <Twitter size={18} style={{ color: 'var(--foreground)' }} className="opacity-60 group-hover:opacity-100 transition-opacity shrink-0" />
                 </a>
-                
+
                 <a
                   href="https://github.com/aaronjager2000"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-end gap-3 py-2.5 hover:opacity-70 transition-opacity group min-h-[44px]"
                 >
-                  <span className="text-[13px] sm:text-xs md:text-sm tracking-tight" style={{ color: 'var(--foreground)' }}>
+                  <span className="tracking-tight" style={{ color: 'var(--foreground)', fontSize: '14px' }}>
                     aaronjager2000
                   </span>
                   <Github size={18} style={{ color: 'var(--foreground)' }} className="opacity-60 group-hover:opacity-100 transition-opacity shrink-0" />
                 </a>
-                
+
                 <a
                   href="https://www.linkedin.com/in/aarongrant/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-end gap-3 py-2.5 hover:opacity-70 transition-opacity group min-h-[44px]"
                 >
-                  <span className="text-[13px] sm:text-xs md:text-sm tracking-tight" style={{ color: 'var(--foreground)' }}>
+                  <span className="tracking-tight" style={{ color: 'var(--foreground)', fontSize: '14px' }}>
                     @aarongrant
                   </span>
                   <Linkedin size={18} style={{ color: 'var(--foreground)' }} className="opacity-60 group-hover:opacity-100 transition-opacity shrink-0" />
