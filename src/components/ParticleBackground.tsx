@@ -21,13 +21,19 @@ export default function ParticleBackground() {
     );
     camera.position.z = 5;
 
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    // Optimize renderer settings
+    const renderer = new THREE.WebGLRenderer({ 
+      alpha: true, 
+      antialias: false, // Disable antialiasing for better performance
+      powerPreference: 'high-performance'
+    });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    // Limit pixel ratio to 1.5 for better performance on high-DPI displays
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     containerRef.current.appendChild(renderer.domElement);
 
-    // Create particles
-    const particleCount = 1500;
+    // Create particles - Reduced count for better performance
+    const particleCount = 800;
     const positions = new Float32Array(particleCount * 3);
     const colors = new Float32Array(particleCount * 3);
     const sizes = new Float32Array(particleCount);
@@ -161,11 +167,23 @@ export default function ParticleBackground() {
 
     // Animation loop
     let animationFrameId: number;
+    let isTabVisible = true;
+    let frameCount = 0;
     const clock = new THREE.Clock();
+
+    // Pause animation when tab is not visible
+    const handleVisibilityChange = () => {
+      isTabVisible = !document.hidden;
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     const animate = () => {
       animationFrameId = requestAnimationFrame(animate);
       
+      // Skip rendering if tab is not visible
+      if (!isTabVisible) return;
+      
+      frameCount++;
       const time = clock.getElapsedTime();
       
       // Smooth mouse following
@@ -219,39 +237,44 @@ export default function ParticleBackground() {
       
       positionAttribute.needsUpdate = true;
 
-      // Update connections between nearby particles
-      let connectionIndex = 0;
-      const connectionThreshold = 1.5;
-      const connectionPositionAttr = connectionGeometry.getAttribute('position') as THREE.BufferAttribute;
-      const connArray = connectionPositionAttr.array as Float32Array;
+      // Update connections only every 3rd frame to reduce CPU load
+      // This is the most expensive operation (O(n²) complexity)
+      if (frameCount % 3 === 0) {
+        let connectionIndex = 0;
+        const connectionThreshold = 1.5;
+        const connectionPositionAttr = connectionGeometry.getAttribute('position') as THREE.BufferAttribute;
+        const connArray = connectionPositionAttr.array as Float32Array;
 
-      for (let i = 0; i < particleCount && connectionIndex < maxConnections * 2; i++) {
-        const i3 = i * 3;
-        for (let j = i + 1; j < particleCount && connectionIndex < maxConnections * 2; j++) {
-          const j3 = j * 3;
-          
-          const dx = posArray[i3] - posArray[j3];
-          const dy = posArray[i3 + 1] - posArray[j3 + 1];
-          const dz = posArray[i3 + 2] - posArray[j3 + 2];
-          const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
-          
-          if (dist < connectionThreshold) {
-            const idx = connectionIndex * 3;
-            connArray[idx] = posArray[i3];
-            connArray[idx + 1] = posArray[i3 + 1];
-            connArray[idx + 2] = posArray[i3 + 2];
+        // Optimize: Only check subset of particles to avoid O(n²) every frame
+        const step = 2; // Check every 2nd particle for connections
+        for (let i = 0; i < particleCount && connectionIndex < maxConnections * 2; i += step) {
+          const i3 = i * 3;
+          for (let j = i + step; j < particleCount && connectionIndex < maxConnections * 2; j += step) {
+            const j3 = j * 3;
             
-            connArray[idx + 3] = posArray[j3];
-            connArray[idx + 4] = posArray[j3 + 1];
-            connArray[idx + 5] = posArray[j3 + 2];
+            const dx = posArray[i3] - posArray[j3];
+            const dy = posArray[i3 + 1] - posArray[j3 + 1];
+            const dz = posArray[i3 + 2] - posArray[j3 + 2];
+            const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
             
-            connectionIndex += 2;
+            if (dist < connectionThreshold) {
+              const idx = connectionIndex * 3;
+              connArray[idx] = posArray[i3];
+              connArray[idx + 1] = posArray[i3 + 1];
+              connArray[idx + 2] = posArray[i3 + 2];
+              
+              connArray[idx + 3] = posArray[j3];
+              connArray[idx + 4] = posArray[j3 + 1];
+              connArray[idx + 5] = posArray[j3 + 2];
+              
+              connectionIndex += 2;
+            }
           }
         }
+        
+        connectionGeometry.setDrawRange(0, connectionIndex);
+        connectionPositionAttr.needsUpdate = true;
       }
-      
-      connectionGeometry.setDrawRange(0, connectionIndex);
-      connectionPositionAttr.needsUpdate = true;
 
       // Rotate scene slightly
       particles.rotation.y = time * 0.05;
@@ -267,6 +290,7 @@ export default function ParticleBackground() {
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('resize', handleResize);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
       
       geometry.dispose();
       material.dispose();

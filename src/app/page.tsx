@@ -27,7 +27,16 @@ export default function Home() {
   };
 
   useEffect(() => {
+    let lastMoveTime = Date.now();
+    
+    // Throttle mousemove events to reduce CPU usage
     const handleMouseMove = () => {
+      const now = Date.now();
+      
+      // Only process mousemove every 100ms
+      if (now - lastMoveTime < 100) return;
+      lastMoveTime = now;
+      
       setIsIdle(false);
 
       // Reset idle timer
@@ -40,7 +49,7 @@ export default function Home() {
       }, 5000);
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
