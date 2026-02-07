@@ -206,21 +206,6 @@ textarea::placeholder {
   }
 }
 
-/* Inner scroll surface for section content on small screens */
-@media (max-width: 640px) {
-  .inner-scroll {
-    position: absolute;
-    inset: 0;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    /* Leave room for the top nav title and bottom safe area */
-    padding-top: calc(env(safe-area-inset-top) + 64px);
-    padding-bottom: calc(env(safe-area-inset-bottom) + 80px);
-  }
-}
 
 /* Mobile sizing for project cards */
 @media (max-width: 640px) {
