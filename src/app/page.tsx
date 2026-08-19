@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Github, Linkedin } from 'lucide-react';
 import ThemeToggle from "@/components/ThemeToggle";
 import UnicornBackground from "@/components/UnicornBackground";
 
@@ -135,6 +135,7 @@ export default function Home() {
             <div className="absolute top-0 bottom-0 left-0 right-10 sm:right-16 lg:right-20 flex items-center justify-end">
               <div className="text-right space-y-8 sm:space-y-10">
                 {[
+                  { title: "UniOps", date: "2026", role: "Founder / Dev / Design", url: "https://uniops.app" },
                   { title: "Magnara.AI", date: "2024", role: "Co-Founder / Dev / Design", url: "https://www.magnara.ai" },
                   { title: "DataPilot", date: "2024", role: "Dev / Design", url: "https://github.com/aaronjager2000/datapilot" },
                   { title: "TupleOS", date: "2026", role: "Dev", url: "https://github.com/aaronjager2000/TupleOS" },
@@ -188,25 +189,13 @@ export default function Home() {
 
               <div className="space-y-3">
                 <a
-                  href="mailto:aaron@magnara.ai"
+                  href="mailto:aarongrantse@gmail.com"
                   className="flex items-center justify-end gap-3 py-2.5 hover:opacity-70 transition-opacity group min-h-[44px]"
                 >
                   <span className="tracking-tight" style={{ color: 'var(--foreground)', fontSize: '14px' }}>
-                    aaron@magnara.ai
+                    aarongrantse@gmail.com
                   </span>
                   <Mail size={18} style={{ color: 'var(--foreground)' }} className="opacity-60 group-hover:opacity-100 transition-opacity shrink-0" />
-                </a>
-
-                <a
-                  href="https://twitter.com/0xaaronjager"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-end gap-3 py-2.5 hover:opacity-70 transition-opacity group min-h-[44px]"
-                >
-                  <span className="tracking-tight" style={{ color: 'var(--foreground)', fontSize: '14px' }}>
-                    @0xaaronjager
-                  </span>
-                  <Twitter size={18} style={{ color: 'var(--foreground)' }} className="opacity-60 group-hover:opacity-100 transition-opacity shrink-0" />
                 </a>
 
                 <a
