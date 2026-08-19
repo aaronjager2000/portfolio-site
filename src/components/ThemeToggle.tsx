@@ -9,6 +9,8 @@ export default function ThemeToggle() {
     // Check for saved theme preference or default to 'dark'
     const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
     const initialTheme = savedTheme || 'dark';
+    // Hydration-safe: server renders 'dark', saved preference applied after mount
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTheme(initialTheme);
     document.documentElement.setAttribute('data-theme', initialTheme);
   }, []);
